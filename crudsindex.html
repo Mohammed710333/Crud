@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruds</title>
+    <link rel="stylesheet" href="crudsstyle.css">
+    <link rel="icon" href="image/2082572.png">
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h1>CRUDS<img src="image/2082572.png" alt="" height="50"></h1>
+            <h3>product management system</h3>
+        </div>
+        <div class="input">
+            <input type="text" placeholder="title" id="title">
+            <div class="price">
+                <input onkeyup="gettotal()" type="number" id="price" placeholder="price">
+                <input onkeyup="gettotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="gettotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="gettotal()" type="number" id="discount" placeholder="discount">
+                <small  id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <button id="submit">create</button>
+        </div>
+        <div class="output">
+            <input onkeyup="searchdata(this.value)" type="text"  id="search" placeholder="Search">
+            <div class="search">
+                <button onclick="getsearchmood(this.id)" id="search_title">Search by title</button>
+                <button onclick="getsearchmood(this.id)" id="search_category">Search by category</button>
+            </div>
+            <div id="deleteAll">
+                
+            </div>
+            <center>
+                <table>
+                    <tr>
+                        <td>ID</td>
+                        <td>TITLE</td>
+                        <td>PRICE</td>
+                        <td>TAXES</td>
+                        <td>ADS</td>
+                        <td>DISCOUNT</td>
+                        <td>TOTAL</td>
+                        <td>CTEGOREY</td>
+                        <td>UPDATE</td>
+                        <td>DELETE</td>
+                    </tr>
+                    <tbody id="tbody">
+                      
+                </tbody>
+                  </table>
+            </center>
+        </div>
+    </div>
+    <script src="crudsjs.js"></script>
+</body>
+</html>
